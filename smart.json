@@ -1,3 +1,9 @@
 {
-  "packages": {}
+  "packages": {
+    "accounts-ui-bootstrap-dropdown": {},
+    "momentjs": {},
+    "router": {},
+    "paginated-subscription": {},
+    "spin": {}
+  }
 }

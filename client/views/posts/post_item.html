@@ -7,29 +7,31 @@
             <div class="blog_head">
               <div class="date">
                 <h6>
-                  <i class="icon-calendar icon-white"></i> 01 Dec 2012
+                  <i class="icon-calendar icon-white"></i> {{formatted_date}}
                 </h6>
               </div>                                                    
               <h3>
-                <a href="http://html.orange-idea.com/builder/hello-world/">{{title}}</a>
+                <a href="/posts/{{slug}}">{{title}}</a>
               </h3>
               <div class="meta">
                 <span>
-                  <a href="http://html.orange-idea.com/builder/tag/design/" rel="tag">Design</a>, <a href="http://html.orange-idea.com/builder/tag/responsive/" rel="tag">Responsive</a>
-                </span>
+                  {{#each tags}}
+                    <a href="/tag/{{.}}" rel="tag">{{.}}</a>,
+                  {{/each}}
+<!--                   <a href="http://html.orange-idea.com/builder/tag/design/" rel="tag">Design</a>, <a href="http://html.orange-idea.com/builder/tag/responsive/" rel="tag">Responsive</a>
+ -->            </span>
                 <span class="last_item">
-                  <a href="http://html.orange-idea.com/builder/hello-world/#comments">3  comments</a>
+                  <a href="http://html.orange-idea.com/builder/hello-world/#comments">{{numComments}}  comments</a>
                 </span>                                                    
               </div>
             </div>
             <div class="blog_item_description">
-              <p>
-                <strong>Welcome to WordPress</strong>. This is your first post. Edit or delete it, then start blogging!<span id="more-1"></span>
-              </p>
+{{#markdown}}{{body}}{{/markdown}}        
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </template>

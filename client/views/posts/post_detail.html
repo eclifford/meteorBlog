@@ -1,0 +1,54 @@
+<template name="postDetail">
+  {{#with currentPost}}
+    
+    <div class="row" style='margin-bottom: 50px'>
+      <div class="span9">
+        <div class="blog_item">
+          <div class="row">
+            <div class="span9">
+              <div class="blog_head">
+                <div class="date">
+                  <h6>
+                    <i class="icon-calendar icon-white"></i> {{formatted_date}}
+                  </h6>
+                </div>                                                    
+                <h3>
+                  <a href="/posts/{{slug}}">{{title}}</a>
+                </h3>
+                <div class="meta">
+                  <span>
+                    {{#each tags}}
+                      <a href="/tag/{{.}}" rel="tag">{{.}}</a>,
+                    {{/each}}
+  <!--                   <a href="http://html.orange-idea.com/builder/tag/design/" rel="tag">Design</a>, <a href="http://html.orange-idea.com/builder/tag/responsive/" rel="tag">Responsive</a>
+   -->            </span>
+                  <span class="last_item">
+                    <a href="http://html.orange-idea.com/builder/hello-world/#comments">{{numComments}}  comments</a>
+                  </span>                                                    
+                </div>
+              </div>
+              <div class="blog_item_description">
+  {{#markdown}}{{body}}{{/markdown}}        
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comments_div">
+      <ul class="unstyled commentsul" style='margin-top: -35px'>
+        {{#each comments}}
+          {{> comment}}
+        {{/each}}
+      </ul>    
+    </div>
+
+   
+
+    {{#if currentUser}}
+      {{> commentSubmit}}
+    {{else}}
+      <p>Please log in to leave a comment</p>
+    {{/if}}
+  {{/with}}
+</template>

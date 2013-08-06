@@ -32,6 +32,7 @@
               <p class="feed"></p>
             </div>
             <div class="span6 soc_icons"></div>
+
           </div>
         </div>
       </div>
@@ -43,10 +44,13 @@
           <div class="row">
             <div class="span3">
               <div class="logo">
-                <a href="http://html.orange-idea.com/builder"> <img src="http://www.orange-idea.com/assets/builder/logo.png" alt="Builder &#8211; Resonsive Wordpress Theme" /></a>
+                <a href="/"> <img src="http://www.orange-idea.com/assets/builder/logo.png" alt="Builder &#8211; Resonsive Wordpress Theme" /></a>
               </div>
             </div>
             <div class="span9">
+              <div class="nav-collapse collapse">
+<ul class="nav pull-right"> <li>{{loginButtons}}</li>
+</ul> </div>
               <nav>
                 <div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-1544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1544"><a href="http://html.orange-idea.com/builder/">Home</a>
                   <ul class="sub-menu">
@@ -65,12 +69,12 @@
         <div class="container">
           <div class="row">
             <div class="span9">
-              {{> postList}}
+              {{renderPage}}
             </div>
           </div>
         </div>
       </div>
-      
+
     </div>
   </body>
 
