@@ -2,18 +2,13 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "accounts-ui-bootstrap-dropdown": {},
       "momentjs": {},
       "router": {},
       "paginated-subscription": {},
-      "spin": {}
+      "spin": {},
+      "npm": {}
     },
     "packages": {
-      "accounts-ui-bootstrap-dropdown": {
-        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
-        "tag": "v0.1.5",
-        "commit": "e12b128f140caa2797720cbd5fae084de7810c6a"
-      },
       "momentjs": {
         "git": "https://github.com/crapthings/meteor-momentjs.git",
         "tag": "v2.1.0",
@@ -33,6 +28,11 @@
         "git": "https://github.com/SachaG/meteor-spin.git",
         "tag": "v0.2.0",
         "commit": "fd3a2871a69442848b4b4e74f5e1ae28fa4a95a4"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.1.4",
+        "commit": "68ab2b952ab21a5bbba879b37be9385ec8ff6d63"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",

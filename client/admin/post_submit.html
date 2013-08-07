@@ -3,12 +3,17 @@
     Post Form
   </h2>
   <form action="" class="main">
-    <input type="text" class="span4" placeholder="Title" name="title" value>
-    <br />
-    <input type="text" class="span4" placeholder="tag1,tag2" name="tags" value>
-    <br /> 
-    <textarea name="body" id="body" cols="30" rows="10"></textarea>
-    <br />
-    <button name="submit" id="submit_form" type="submit" class="btn btn-small">Submit Post</button>
+    <fieldset>
+      <div class="form-group">
+        <label for="postTitle">Post Title</label>
+        <input type="text" class="form-control" placeholder="Title" name="title">
+      </div>
+      <br />
+      <input type="text" class="span4" placeholder="tag1,tag2" name="tags" value>
+      <br /> 
+      <textarea name="body" id="body" cols="30" rows="10"></textarea>
+      <br />
+      <button name="submit" id="submit_form" type="submit" class="btn btn-small">Submit Post</button>
+    </fieldset>
   </form>
 </template>

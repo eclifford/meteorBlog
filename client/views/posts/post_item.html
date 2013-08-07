@@ -1,37 +1,24 @@
 <template name="postItem">
-  <div class="row" style='margin-bottom: 50px'>
-    <div class="span9">
-      <div class="blog_item">
-        <div class="row">
-          <div class="span9">
-            <div class="blog_head">
-              <div class="date">
-                <h6>
-                  <i class="icon-calendar icon-white"></i> {{formatted_date}}
-                </h6>
-              </div>                                                    
-              <h3>
-                <a href="/posts/{{slug}}">{{title}}</a>
-              </h3>
-              <div class="meta">
-                <span>
-                  {{#each tags}}
-                    <a href="/tag/{{.}}" rel="tag">{{.}}</a>,
-                  {{/each}}
-<!--                   <a href="http://html.orange-idea.com/builder/tag/design/" rel="tag">Design</a>, <a href="http://html.orange-idea.com/builder/tag/responsive/" rel="tag">Responsive</a>
- -->            </span>
-                <span class="last_item">
-                  <a href="http://html.orange-idea.com/builder/hello-world/#comments">{{numComments}}  comments</a>
-                </span>                                                    
-              </div>
-            </div>
-            <div class="blog_item_description">
-{{#markdown}}{{body}}{{/markdown}}        
-            </div>
-          </div>
-        </div>
+  <article class='postItem'>
+    <header>
+      <div class="date">
+        <h6>
+          <i class="icon-calendar icon-white"></i> {{formatted_date}}
+        </h6>
       </div>
+      <h3>
+        <a href="/posts/{{slug}}">{{title}}</a>
+      </h3>
+      <div class="meta">
+        {{#each tags}}
+        <a href="/tag/{{.}}" rel="tag">{{.}}</a>,
+        {{/each}}  
+      </div>
+    </header>
+    <div class='postItemHead'>
     </div>
-  </div>
-
+    <div class='postItemBody'>
+{{#markdown}}{{body}}{{/markdown}}    
+    </div>  
+  </article>
 </template>
