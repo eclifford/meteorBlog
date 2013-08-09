@@ -4,6 +4,9 @@
     "router": {},
     "paginated-subscription": {},
     "spin": {},
-    "npm": {}
+    "npm": {},
+    "accounts-ui-bootstrap-3": {},
+    "bootstrap-3": {},
+    "ace": {}
   }
 }

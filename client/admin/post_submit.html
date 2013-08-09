@@ -2,6 +2,8 @@
   <h2>
     Post Form
   </h2>
+
+
   <form action="" class="main">
     <fieldset>
       <div class="form-group">
@@ -11,9 +13,30 @@
       <br />
       <input type="text" class="span4" placeholder="tag1,tag2" name="tags" value>
       <br /> 
-      <textarea name="body" id="body" cols="30" rows="10"></textarea>
+
+ 
+    <div class="bs-example bs-example-tabs">
+      <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a href="#code" data-toggle="tab">code</a></li>
+        <li class=""><a href="#preview" data-toggle="tab">preview</a></li>
+      </ul>
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane active" id="code">
+         <div id="editor"></div>
+   
+        </div>
+        <div class="tab-pane" id="preview">
+        </div>
+      </div>
+    </div>
+
       <br />
-      <button name="submit" id="submit_form" type="submit" class="btn btn-small">Submit Post</button>
+      <button name="submit" id="submit_form" type="submit" class="btn btn-primary btn-lg">Submit Post</button>
     </fieldset>
   </form>
+
+
+  <pre><code class="html"><span class="tag">&lt;<span class="keyword">h1</span>&gt;</span>HTML code<span class="tag">&lt;/<span class="keyword">h1</span>&gt;</span>
+<span class="tag">&lt;<span class="keyword">p</span><span class="attribute"> class=<span class="value">"some"</span></span>&gt;</span>This is an example<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+</code></pre>
 </template>

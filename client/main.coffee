@@ -3,4 +3,3 @@
 Deps.autorun ->
   Meteor.subscribe 'comments', Session.get 'currentPostId'
 
-console.log CryptoJS

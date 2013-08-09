@@ -19,9 +19,10 @@ Meteor.methods
       throw new Meteor.Error 422, "You must comment on a valid post"
 
     # Create the comment
-    comment = _.extend _.pick commentAttributes, 'postId', 'body', 
+    comment = _.extend _.pick(commentAttributes, 'postId', 'body'), 
       userId: user._id
       author: user.username
+      gravatar: user.profile.gravatar
       submitted: new Date().getTime()
 
     # Increase the comment count

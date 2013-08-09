@@ -6,7 +6,10 @@
       "router": {},
       "paginated-subscription": {},
       "spin": {},
-      "npm": {}
+      "npm": {},
+      "accounts-ui-bootstrap-3": {},
+      "bootstrap-3": {},
+      "ace": {}
     },
     "packages": {
       "momentjs": {
@@ -33,6 +36,21 @@
         "git": "https://github.com/arunoda/meteor-npm.git",
         "tag": "v0.1.4",
         "commit": "68ab2b952ab21a5bbba879b37be9385ec8ff6d63"
+      },
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.1.6",
+        "commit": "55d9e0dcf847521fc7192c7ef27ae84d2166f874"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v0.2.8",
+        "commit": "8026f0beaa0274849adfcf8c53d919216b5e06ba"
+      },
+      "ace": {
+        "git": "https://github.com/Jay-Oh-eN/meteor-ace.git",
+        "tag": "v1.0.0",
+        "commit": "01eb5802a48d6c44f038132c75bb92138569b000"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",

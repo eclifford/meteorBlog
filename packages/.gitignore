@@ -1,8 +1,9 @@
-accounts-ui-bootstrap-dropdown
 momentjs
-marked
 router
-page-js-ie-support
 paginated-subscription
 spin
 npm
+page-js-ie-support
+accounts-ui-bootstrap-3
+bootstrap-3
+ace

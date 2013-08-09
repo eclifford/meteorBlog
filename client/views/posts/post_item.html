@@ -1,5 +1,5 @@
 <template name="postItem">
-  <article class='postItem'>
+  <article class='post-item'>
     <header>
       <div class="date">
         <h6>
@@ -15,10 +15,11 @@
         {{/each}}  
       </div>
     </header>
-    <div class='postItemHead'>
-    </div>
-    <div class='postItemBody'>
-{{#markdown}}{{body}}{{/markdown}}    
+    <div class='post-item-body'>
+{{#markdown}}{{{body}}}{{/markdown}}   
+
+    <a href="#">read more</a> 
     </div>  
+
   </article>
 </template>
