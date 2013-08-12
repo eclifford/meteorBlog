@@ -6,7 +6,6 @@
   <link rel="stylesheet" id="gOpenSans-css" href="http://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800&amp;subset=latin%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%2Clatin-ext%2Ccyrillic&amp;ver=3.4.2" type="text/css" media="all">
 
   <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-
 </head>
 <body>
  <div class="row">
@@ -17,7 +16,7 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="logo">
-            <a href="/"><h1>EricClifford</h1></a>
+            <a href="/"><img src="/logo.png" alt=""><h1></h1></a>
           </div>
         </div>
         <div class="col-lg-9">
@@ -32,13 +31,15 @@
     <main>
       <div class="row">
         <div class="col-lg-9">
+        <div class="well">
           {{renderPage}}
+          </div>
         </div>
         <div class="col-lg-3">
           <div class="well">
             <h5>Recent Posts</h5><hr />
             <div class="textwidget">
-              Testing
+              {{> postRecent}}
             </div>
           </div>
         </div>

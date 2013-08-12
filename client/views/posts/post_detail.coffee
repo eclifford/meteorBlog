@@ -12,3 +12,7 @@ Template.postDetail.helpers
   comments: ->
     Comments.find 
       postId: @_id
+
+Template.postDetail.rendered = ->
+  @findAll("pre code").forEach (e) ->
+    hljs.highlightBlock e

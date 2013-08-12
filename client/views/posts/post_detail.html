@@ -14,11 +14,11 @@
           {{#each tags}}
           <a href="/tag/{{.}}" rel="tag">{{.}}</a>,
           {{/each}}  
-          / {{numComments}} comments
+          {{numComments}} comments
         </div>
       </header>
       <div class='post-item-body'>
-{{#markdown}}{{body}}{{/markdown}}    
+{{#markdown}}{{{body}}}{{/markdown}}    
       </div>  
     </article>
 
