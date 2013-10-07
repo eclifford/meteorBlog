@@ -5,8 +5,11 @@
     "paginated-subscription": {},
     "spin": {},
     "npm": {},
-    "accounts-ui-bootstrap-3": {},
+    "font-awesome": {},
+    "iron-router": {},
+    "reactive-ace": {},
+    "prismjs": {},
     "bootstrap-3": {},
-    "ace": {}
+    "accounts-ui-bootstrap-3": {}
   }
 }

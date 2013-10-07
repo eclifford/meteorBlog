@@ -5,6 +5,5 @@ Accounts.onCreateUser (options, user) ->
   if options.profile
     user.profile = options.profile
 
-  user.profile = {}
   user.profile.gravatar = md5(user.emails[0].address)
   return user

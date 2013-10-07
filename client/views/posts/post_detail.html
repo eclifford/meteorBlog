@@ -1,38 +1,5 @@
 <template name="postDetail">
-  {{#with currentPost}}
-    <article class='post-item'>
-      <header>
-        <div class="date">
-          <h6>
-            <i class="icon-calendar icon-white"></i> {{formatted_date}}
-          </h6>
-        </div>
-        <h3>
-          <a href="/posts/{{slug}}">{{title}}</a>
-        </h3>
-        <div class="meta">
-          {{#each tags}}
-          <a href="/tag/{{.}}" rel="tag">{{.}}</a>,
-          {{/each}}  
-          {{numComments}} comments
-        </div>
-      </header>
-      <div class='post-item-body'>
-{{#markdown}}{{{body}}}{{/markdown}}    
-      </div>  
-    </article>
+  {{> postItem}}
+  {{> commentList}}
 
-    <ul class='comments-list'>
-      {{#each comments}}
-        {{> comment}}
-      {{/each}} 
-    </ul>
-
-    {{#if currentUser}}
-      {{> commentSubmit}}
-    {{else}}
-      <p>Please log in to leave a comment</p>
-    {{/if}}
-
-  {{/with}}
 </template>

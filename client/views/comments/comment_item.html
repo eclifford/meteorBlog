@@ -1,17 +1,11 @@
 <template name="comment">
-  <li class="comment-item">
-    <div class="comment-author pull-left">   
-      <img alt="" src="http://gravatar.com/avatar/{{gravatar}}" class="avatar img-polaroid avatar-70 photo avatar-default" height="70" width="70">
+  <li class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="http://gravatar.com/avatar/{{gravatar}}" alt="avatar">
+    </a>
+    <div class="media-body">
+      <h6>By <a href=''>{{author}}</a> {{formatted_date}}</h6> 
+      {{body}}
     </div>
-    <div class="comment-container">
-      <div class="comment-header">
-        <h6>By <a href=''>{{author}}</a> {{formatted_date}}</h6> 
-        <hr style="margin-top:0px; margin-bottom:10px;">
-      </div>
-      <div class="comment-body">
-        {{body}}
-      </div>
-    </div>
-    <div class="clearfix"></div>
   </li>
 </template> 

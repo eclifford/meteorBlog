@@ -1,0 +1,39 @@
+<template name="layout">
+  <div id="wrap">
+    {{> header}}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          {{{yield}}}
+        </div>
+        <div class="col-md-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">Recent Posts</h1> 
+            </div>
+            <div class="panel-body">
+              {{> postRecent}}
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+  <footer>
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+      
+        </div>
+        <div class="col-md-6">
+          <ul class="footer-social">
+            <li><a href="http://github.com/eclifford"><i class="icon-github icon-large"></i></a></li>
+            <li><a href="http://www.linkedin.com/in/ericclifford"><i class="icon-linkedin icon-large"></i></a></li>
+            <li><a href="https://plus.google.com/u/0/109130636114224594190"><i class="icon-google-plus icon-large"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

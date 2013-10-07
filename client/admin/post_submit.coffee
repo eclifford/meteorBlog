@@ -1,31 +1,29 @@
 Template.postSubmit.events
   'submit form': (e) ->
     e.preventDefault() 
-    editor = ace.edit("editor")
-
     post = 
       title: $(e.target).find('[name=title]').val()
       tags: [$(e.target).find('[name=title]').val()]
-      body: editor.getValue()
+      body: editor.value
 
     Meteor.call 'post', post, (error, slug) ->
       if error
         alert 'error'
       else
-        Meteor.Router.to 'postDetail', slug
+        Router.go 'postDetail', {slug: slug}
 
-Template.postSubmit.rendered = ->
-  editor = ace.edit("editor")
+Meteor.startup ->
+  window.editor = new ReactiveAce
 
-  editor.setTheme("ace/theme/github")
-  editor.getSession().setMode("ace/mode/markdown")
-  editor.setShowPrintMargin(false)
-
-  editor.getSession().on 'change', (e) ->
-    converter = new Showdown.converter()
-
-    $('#preview').html(converter.makeHtml(editor.getValue()))
-    $("pre code").each (i, e) ->
-      hljs.highlightBlock e
+  Template.postSubmit.rendered = ->
+    editor.attach ace.edit 'aceEditor'
+    editor.theme = 'github'
+    editor.syntaxMode = 'markdown'
+    editor.changed = (e) ->
+      converter = new Showdown.converter()
+      
+      $('#preview').html(converter.makeHtml(editor.value))
+      $("pre code").each (i, e) ->
+        hljs.highlightBlock e
 
 

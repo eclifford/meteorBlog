@@ -8,3 +8,17 @@ coffeescript
 accounts-password
 showdown
 less
+standard-app-packages
+font-awesome
+HTML5-History-API
+iron-router
+momentjs
+npm
+page-js-ie-support
+paginated-subscription
+reactive-ace
+router
+spin
+prismjs
+bootstrap-3
+accounts-ui-bootstrap-3

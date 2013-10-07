@@ -1,26 +1,74 @@
 <template name="postItem">
-  <article class='post-item'>
-    <header>
-      <div class="date">
-        <h6>
-          <i class="icon-calendar icon-white"></i> {{formatted_date}}
-        </h6>
-      </div>
-      <h3>
-        <a href="/posts/{{slug}}">{{title}}</a>
-      </h3>
-      <div class="meta">
-        {{#each tags}}
-        <a href="/tag/{{.}}" rel="tag">{{.}}</a>,
-        {{/each}}  
-        {{numComments}} comments
-      </div>
-    </header>
-    <div class='post-item-body'>
-{{#markdown}}{{{body}}}{{/markdown}}   
+  <div class="row">
+    <div class="col-md-2">
+     <div class="panel panel-default post-item-meta">
+          <img alt="" src="http://gravatar.com/avatar/{{authorGravatar}}?s=100" height="100px" width="100px" class="post-item-avatar">
 
-    <a href="#">read more</a> 
-    </div>  
+           <a href="/posts/{{slug}}" class="icon-wrapper pull-left" style="width: 50%">
+              <div class="pull-left"><i class="icon-comments icon-large"></i></div> 
+              <div class='text-center'>{{numComments}}</div>
+              <div class="clearfix"></div>
+            </a>
 
-  </article>
+            <a href="#" class="icon-wrapper pull-left vote" style="width: 50%">
+              <div class="pull-left"><i class="icon-thumbs-up icon-large"></i></div> 
+              <div class='text-center'>{{votes}}</div>
+              <div class="clearfix"></div>
+            </a>
+          <div class="clearfix"></div>
+          <a href="#" class="icon-wrapper pull-left vote" style="width: 100%">
+              <div class="pull-left"><i class="icon-calendar icon-large"></i></div> 
+              <div class='text-center'>{{formatted_date}}</div>
+              <div class="clearfix"></div>
+            </a>
+            <div>
+           <a class="icon-wrapper pull-left text-center" style="width: 25%">
+              <i class="icon-facebook icon-large"></i>
+            </a>
+            <a class="icon-wrapper pull-left text-center" style="width: 25%">
+              <i class="icon-google-plus icon-large"></i>
+            </a>
+            <a class="icon-wrapper pull-left text-center" style="width: 25%">
+              <i class="icon-twitter icon-large"></i>
+            </a>
+            <a class="icon-wrapper pull-left text-center" style="width: 25%">
+              <i class="icon-github icon-large"></i>
+            </a>
+            <div class="clearfix"></div>
+          </div>
+        </div>   
+      </div> 
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="panel-title">{{title}}</h1>
+        </div>
+        <div class="panel-body">
+          <div class="post-secondary-meta">     
+            <div class="pull-left">
+               <i class="icon-reorder"></i> in <a href='#'>Web Development</a>
+            </div>
+            <div class="pull-right">
+              {{#if is_admin}}
+              <a href="/admin/posts/edit/{{_id}}" class="text-center" title="edit post">
+                <i class="icon-edit icon-large"></i>
+              </a>
+              <a class="text-center delete" title="delete post">
+                <i class="icon-remove icon-large"></i>
+              </a>
+              <a class="text-center {{#unless draft}}active{{/unless}} publish" title="publish post">
+                <i class="icon-eye-open icon-large"></i>
+              </a>
+              <a class="text-center {{#if draft}}active{{/if}} unpublish" title="unpublish post">
+                <i class="icon-eye-close icon-large"></i>
+              </a>
+            {{/if}} 
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          {{#markdown}}{{{body}}}{{/markdown}}   
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

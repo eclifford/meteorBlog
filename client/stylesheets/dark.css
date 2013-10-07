@@ -1,96 +1,110 @@
 /*
 
-Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
 
 */
 
+pre {
+  border: 0px;
+}
+
 pre code {
   display: block; padding: 0.5em;
-  background: #444;
+  background: #3F3F3F;
+  color: #DCDCDC;
 }
 
 pre .keyword,
-pre .literal,
-pre .change,
-pre .winutils,
-pre .flow,
+pre .tag,
+pre .css .class,
+pre .css .id,
 pre .lisp .title,
-pre .clojure .built_in,
 pre .nginx .title,
-pre .tex .special {
-  color: white;
+pre .request,
+pre .status,
+pre .clojure .attribute {
+  color: #E3CEAB;
 }
 
-pre code,
-pre .subst {
-  color: #DDD;
-}
-
-pre .string,
-pre .title,
-pre .haskell .type,
-pre .ini .title,
-pre .tag .value,
-pre .css .rules .value,
-pre .preprocessor,
-pre .ruby .symbol,
-pre .ruby .symbol .string,
-pre .ruby .class .parent,
-pre .built_in,
-pre .sql .aggregate,
 pre .django .template_tag,
 pre .django .variable,
-pre .smalltalk .class,
+pre .django .filter .argument {
+  color: #DCDCDC;
+}
+
+pre .number,
+pre .date {
+  color: #8CD0D3;
+}
+
+pre .dos .envvar,
+pre .dos .stream,
+pre .variable,
+pre .apache .sqbracket {
+  color: #EFDCBC;
+}
+
+pre .dos .flow,
+pre .diff .change,
+pre .python .exception,
+pre .python .built_in,
+pre .literal,
+pre .tex .special {
+  color: #EFEFAF;
+}
+
+pre .diff .chunk,
+pre .subst {
+  color: #8F8F8F;
+}
+
+pre .dos .keyword,
+pre .python .decorator,
+pre .title,
+pre .haskell .type,
+pre .diff .header,
+pre .ruby .class .parent,
+pre .apache .tag,
+pre .nginx .built_in,
+pre .tex .command,
+pre .prompt {
+    color: #efef8f;
+}
+
+pre .dos .winutils,
+pre .ruby .symbol,
+pre .ruby .symbol .string,
+pre .ruby .string {
+  color: #DCA3A3;
+}
+
+pre .diff .deletion,
+pre .string,
+pre .tag .value,
+pre .preprocessor,
+pre .built_in,
+pre .sql .aggregate,
 pre .javadoc,
-pre .ruby .string,
-pre .django .filter .argument,
+pre .smalltalk .class,
 pre .smalltalk .localvars,
 pre .smalltalk .array,
+pre .css .rules .value,
 pre .attr_selector,
 pre .pseudo,
-pre .addition,
-pre .stream,
-pre .envvar,
-pre .apache .tag,
 pre .apache .cbracket,
-pre .tex .command,
-pre .prompt,
-pre .coffeescript .attribute {
-  color: #D88;
+pre .tex .formula {
+  color: #CC9393;
 }
 
+pre .shebang,
+pre .diff .addition,
 pre .comment,
 pre .java .annotation,
-pre .python .decorator,
 pre .template_comment,
 pre .pi,
-pre .doctype,
-pre .deletion,
-pre .shebang,
-pre .apache .sqbracket,
-pre .tex .formula {
-  color: #777;
-}
-
-pre .keyword,
-pre .literal,
-pre .title,
-pre .css .id,
-pre .phpdoc,
-pre .haskell .type,
-pre .vbscript .built_in,
-pre .sql .aggregate,
-pre .rsl .built_in,
-pre .smalltalk .class,
-pre .diff .header,
-pre .chunk,
-pre .winutils,
-pre .bash .variable,
-pre .apache .tag,
-pre .tex .special,
-pre .request,
-pre .status {
-  font-weight: bold;
+pre .doctype {
+  color: #7F9F7F;
 }
 
 pre .coffeescript .javascript,
@@ -102,3 +116,4 @@ pre .xml .css,
 pre .xml .cdata {
   opacity: 0.5;
 }
+

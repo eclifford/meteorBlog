@@ -1,21 +1,46 @@
-Meteor.Router.add 
-  '/': 'postList'
+adminFilter = ->
+  user = Meteor.user()
+  unless user
+    @render "accessDenied"
+    @stop()
 
-  '/posts/:slug': 
-    to: 'postDetail'
-    and: (slug) ->
-      Session.set 'currentPostUrl', slug
+Router.map ->
+  @route 'postList', 
+    path: '/'
+    data: ->
+      if Meteor.user() and Meteor.user().profile.type is 'admin' 
+        return Posts.find {},
+          sort:
+            submitted: - 1
+          limit: postsHandle.limit()
+      else 
+        return Posts.find {draft: false},
+          sort:
+            submitted: - 1
+          limit: postsHandle.limit()
 
-  '/admin/posts/new': 'postSubmit'
+  @route 'postDetail',
+    path: '/posts/:slug'
+    data: ->
+      return Posts.findOne 
+        slug: @params.slug
 
-Meteor.Router.filters
-  'requireLogin': (page) ->
-    if Meteor.user()
-      return page
-    else if Meteor.loggingIn()
-      return 'loading'
-    else
-      return 'accessDenied'
+  @route 'postSubmit',
+    onBeforeRun: adminFilter
+    path: '/admin/posts/new'
 
-Meteor.Router.filter 'requireLogin', 
-  only: 'postSubmit'
+  @route 'postEdit',
+    onBeforeRun: adminFilter
+    path: '/admin/posts/edit/:id'
+    data: ->
+      Session.set('currentPostId', @params.id)
+      return Posts.findOne 
+        _id: @params.id
+
+  @route 'admin', 
+    onBeforeRun: adminFilter
+    path: '/admin'
+
+
+Router.configure 
+  layout: 'layout' 

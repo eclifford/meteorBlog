@@ -1,0 +1,30 @@
+<template name="admin">
+  <div class="well">
+    <h1>Posts</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>Title</td>
+          <td># Comments</td>
+          <td>Manage</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each posts}}
+          <tr id='{{_id}}'>
+            <td>{{_id}}</td>
+            <td>{{title}}</td>
+            <td>0</td>
+            <td>
+              <a href="/admin/posts/edit/{{_id}}"><i class="icon-edit-sign icon-2x"></i></a>
+              <a href='#'><i class="delete icon-remove-sign icon-2x"></i></a>
+            </td>
+          </tr>
+        {{/each}}   
+      </tbody>
+    </table>
+    <a href="/admin/posts/new" class="btn btn-primary btn-lg">New Post</a>
+
+  </div>
+</template>

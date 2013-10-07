@@ -1,9 +1,9 @@
 Template.postList.helpers
-  posts: ->
-    return @Posts.find {},
-      sort:
-        submitted: - 1
-      limit: postsHandle.limit()
+  # posts: ->
+  #   return Posts.find {},
+  #     sort:
+  #       submitted: - 1
+  #     limit: postsHandle.limit()
 
   postsReady: ->
     return ! postsHandle.loading()

@@ -1,7 +1,6 @@
 <template name="postRecent">
   <div class="list-group">
     {{#each posts}}
-
       <a href="/posts/{{slug}}" class="list-group-item">  <span class="badge">{{numComments}}</span>{{title}}</a>
     {{/each}}
   </div>
